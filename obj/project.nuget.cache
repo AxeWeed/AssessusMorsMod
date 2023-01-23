@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lq/tINizfJCcbjc2YwceosgI8qmsrv2VF0f/JU3lGMuoJHBGv7tRH1Ty7xFK+fnmhlOGOo02wGZ8c7FpshspIQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Iamsa\\OneDrive\\Documents\\My Games\\Terraria\\tModLoader\\ModSources\\AssessusMorsMod\\AssessusMorsMod.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Iamsa\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
