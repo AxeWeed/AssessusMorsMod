@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\tModLoader.targets" />
+  <PropertyGroup>
+    <AssemblyName>AssessusMorsMod</AssemblyName>
+    <TargetFramework>net6.0</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Enemies\Arconage.cs" />
+    <Compile Remove="Enemies\OrangeSlime.cs" />
+    <Compile Remove="Enemies\Something.cs" />
+    <Compile Remove="Guns\AK.cs" />
+    <Compile Remove="Guns\Rango.cs" />
+    <Compile Remove="Items\.cs" />
+    <Compile Remove="Items\AmberBlade.cs" />
+    <Compile Remove="Items\AmethystBlade.cs" />
+    <Compile Remove="Items\Ashes.cs" />
+    <Compile Remove="Items\Audation.cs" />
+    <Compile Remove="Items\BubbleBlast.cs" />
+    <Compile Remove="Items\Darkness.cs" />
+    <Compile Remove="Items\DiamondBlade.cs" />
+    <Compile Remove="Items\EmeraldBlade.cs" />
+    <Compile Remove="Items\Junkosis.cs" />
+    <Compile Remove="Items\PerfectConvergence.cs" />
+    <Compile Remove="Items\PetalStorm.cs" />
+    <Compile Remove="Items\RubyBlade.cs" />
+    <Compile Remove="Items\SapphireBlade.cs" />
+    <Compile Remove="Items\ShinyKnife.cs" />
+    <Compile Remove="Items\ShudderShock.cs" />
+    <Compile Remove="Items\TopazBlade.cs" />
+    <Compile Remove="Items\Vacancy.cs" />
+    <Compile Remove="Items\VoidPickaxe.cs" />
+    <Compile Remove="Items\Whap.cs" />
+    <Compile Remove="Items\ZipZapZop.cs" />
+    <Compile Remove="Projectiles\WhapProjectile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Enemies\Arconage.cs" />
+    <None Include="Enemies\OrangeSlime.cs" />
+    <None Include="Enemies\Something.cs" />
+    <None Include="Guns\AK.cs" />
+    <None Include="Guns\Rango.cs" />
+    <None Include="Projectiles\WhapProjectile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+  </ItemGroup>
+</Project>
