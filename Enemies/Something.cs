@@ -7,10 +7,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 using AssessusMorsMod.Swords;
+
 namespace AssessusMorsMod.Enemies
 {
     public class Something : ModNPC
     {
+
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Something");
@@ -19,7 +21,7 @@ namespace AssessusMorsMod.Enemies
 
         public override void SetDefaults()
         {
-            NPC.width = 32;
+            NPC.width = 33;
             NPC.height = 15;
             NPC.damage = 60;
             NPC.defense = 3;
@@ -36,6 +38,7 @@ namespace AssessusMorsMod.Enemies
         {
             return SpawnCondition.Underground.Chance * 0.2f;
         }
+
         public override void FindFrame(int frameHeight)
         {
             NPC.frameCounter++;
@@ -45,13 +48,11 @@ namespace AssessusMorsMod.Enemies
             }
             NPC.frame.Y = (int)NPC.frameCounter / 10 * frameHeight;
         }
-        public override void OnKill()
+
+        public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
         {
-            
-            
-            
-
+            Item.newItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height);
         }
-    }
 
+    }
 }
