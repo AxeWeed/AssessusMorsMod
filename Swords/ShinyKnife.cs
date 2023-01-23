@@ -22,16 +22,16 @@ namespace AssessusMorsMod.Swords
             Item.DamageType = DamageClass.Melee;
             Item.width = 10;
             Item.height = 10;
-            Item.useTime = 1;
+            Item.useTime = 20;
             Item.useAnimation = 10;
-            Item.useStyle = ItemUseStyleID.Thrust;
+            Item.useStyle = ItemUseStyleID.GolfPlay;
             Item.knockBack = 3;
             Item.value = 10000;
             Item.rare = ItemRarityID.Cyan;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
             Item.shoot = ProjectileID.ZoologistStrikeRed;
-            Item.shootSpeed = 30f;
+            Item.shootSpeed = 50f;
             Item.crit = 50;
         }
 
@@ -50,12 +50,7 @@ namespace AssessusMorsMod.Swords
         }
         public override void AddRecipes()
         {
-            Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ItemID.LunarBar, 18);
-            recipe.AddIngredient(ItemID.DeathSickle, 1);
-            recipe.AddIngredient(ItemID.FragmentSolar, 10);
-            recipe.AddTile(TileID.LunarCraftingStation);
-            recipe.Register();
+           
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
@@ -63,9 +58,9 @@ namespace AssessusMorsMod.Swords
             position += offset;
 
 
-            for (var i = 0; i < Main.rand.Next(2, 5); i++)
+            for (var i = 0; i < Main.rand.Next(1, 1); i++)
             {
-                Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(15));
+                Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(45));
                 Projectile.NewProjectile(Projectile.GetSource_NaturalSpawn(), position, perturbedSpeed, type, damage, knockback, player.whoAmI);
             }
             return false;
